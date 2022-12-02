@@ -13,26 +13,16 @@ class Solution {
 //         return true;
         
         
-        // int rev =0;int num = x;
-        // while(x != 0)
-        // {
-        //     rev = rev*10 + (x%10);
-        //     x = x/10;
-        // }
-        // if(num == rev)
-        //     return true;
-        // else
-        //     return false;
+        int rev =0;int num = x;
+        while(x > 0)
+        {
+            rev = rev*10 + (x%10);
+            x = x/10;
+        }
+        if(num == rev)
+            return true;
+        return false;
         
-        int num = 0,temp = x;
-      while(x>0){
-              num = num*10 + x%10;
-              x = x/10;
-            }
-      if(temp == num){
-        return true;
-      }
-      return false;
-            
     }
+          
 }
