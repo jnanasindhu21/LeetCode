@@ -41,8 +41,14 @@ class Solution
         // your code here
         int diff = Integer.MAX_VALUE;
         Collections.sort(a);
-        for(int i=0, j=i+m-1; i+m-1<n;i++,j++)
-            diff = Math.min(diff,(a.get(j)-a.get(i)));
+        //for(int i=0, j=m-1; i<m || j<n;i++,j++)
+          //  diff = Math.min(diff,(a.get(j)-a.get(i)));
+        
+        for(int i=0, j=m-1; j<n; j++, i++)
+        {
+            diff = Math.min(diff, a.get(j) - a.get(i));
+        }
+        
         return diff;
     }
 }
